@@ -14,9 +14,9 @@ public class DataConverterImpl implements DataConverter {
         for (int i = 1; i < lines.size(); i++) {
             String[] data = lines.get(i).split(",");
             FruitTransactionService transactionService = new FruitTransactionServiceImpl();
-            transactionService.createTransaction(Operation.fromCode(data[0]),
-                    data[1],
-                    Integer.parseInt(data[2]));
+            transactionService.createTransaction(Operation.fromCode(data[0].trim()),
+                    data[1].trim(),
+                    Integer.parseInt(data[2].trim()));
         }
         return Storage.getTransactions();
     }
