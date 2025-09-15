@@ -1,6 +1,5 @@
 package core.basesyntax.io;
 
-import core.basesyntax.service.ReportGenerator;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.IOException;
