@@ -7,9 +7,9 @@ import java.io.IOException;
 
 public class FileWriterImpl implements FileWriter {
     @Override
-    public void write(ReportGenerator reportGenerator, File output) {
+    public void write(String reportGenerator, File output) {
         try (BufferedWriter bufferedWriter = new BufferedWriter(new java.io.FileWriter(output))) {
-            bufferedWriter.write(reportGenerator.getReport());
+            bufferedWriter.write(reportGenerator);
         } catch (IOException e) {
             throw new RuntimeException("can't reach file " + output, e);
         }

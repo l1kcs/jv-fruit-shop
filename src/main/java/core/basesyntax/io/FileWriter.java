@@ -4,5 +4,5 @@ import core.basesyntax.service.ReportGenerator;
 import java.io.File;
 
 public interface FileWriter {
-    void write(ReportGenerator reportGenerator, File output);
+    void write(String reportGenerator, File output);
 }
