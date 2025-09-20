@@ -7,6 +7,5 @@ public class SupplyOperation implements OperationHandler {
     @Override
     public void apply(FruitTransaction transaction) {
         Storage.updateFruit(transaction.getFruit(), transaction.getQuantity());
-        Storage.addTransaction(transaction);
     }
 }
