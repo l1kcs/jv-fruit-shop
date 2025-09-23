@@ -27,6 +27,7 @@ import java.util.Map;
 public class Main {
     private static final String FINAL_PATH = "finalReport.csv";
     private static final String BEGIN_PATH = "reportToRead.csv";
+
     public static void main(String[] arg) {
         FileReader fileReader = new FileReaderImpl();
         List<String> inputReport = fileReader.read(new File(BEGIN_PATH));
