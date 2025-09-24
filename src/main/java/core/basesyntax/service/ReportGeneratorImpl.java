@@ -5,16 +5,17 @@ import java.util.stream.Collectors;
 
 public class ReportGeneratorImpl implements ReportGenerator {
     private static final String HEADER = "fruit,quantity";
+    private static final String WORD_SEPARATOR = ",";
 
     @Override
     public String getReport() {
-        if (Storage.getFruits() == null || Storage.getFruits().isEmpty()) {
+        if (Storage.getFruits().isEmpty()) {
             return HEADER;
         }
         return HEADER + System.lineSeparator()
                 + Storage.getFruits().entrySet().stream()
                         .map(fruit
-                                -> fruit.getKey() + "," + fruit.getValue())
+                                -> fruit.getKey() + WORD_SEPARATOR + fruit.getValue())
                         .collect(Collectors.joining(System.lineSeparator()));
     }
 }
