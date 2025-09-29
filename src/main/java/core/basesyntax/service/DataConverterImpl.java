@@ -18,6 +18,6 @@ public class DataConverterImpl implements DataConverter {
                     data[1].trim(),
                     Integer.parseInt(data[2].trim()));
         }
-        return Storage.getTransactions();
+        return Storage.getRecords();
     }
 }
