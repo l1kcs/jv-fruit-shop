@@ -10,11 +10,11 @@ public class Storage {
     private static final List<FruitTransaction> transactions = new ArrayList<>();
     private static final Map<String, Integer> fruits = new HashMap<>();
 
-    public static void addTransaction(FruitTransaction transaction) {
+    public static void addRecord(FruitTransaction transaction) {
         transactions.add(transaction);
     }
 
-    public static List<FruitTransaction> getTransactions() {
+    public static List<FruitTransaction> getRecords() {
         return new ArrayList<>(transactions);
     }
 

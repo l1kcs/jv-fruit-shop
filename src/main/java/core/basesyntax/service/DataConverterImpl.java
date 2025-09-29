@@ -23,6 +23,6 @@ public class DataConverterImpl implements DataConverter {
                     data[FRUIT_NAME_INDEX].trim(),
                     Integer.parseInt(data[COUNT_INDEX].trim()));
         }
-        return Storage.getTransactions();
+        return Storage.getRecords();
     }
 }
